@@ -1,0 +1,44 @@
+{
+  "id": "skin-saathi",
+  "name": "Skin Saathi",
+  "organisation": "Twacha Community Systems",
+  "color": "#7c3c96",
+  "topic": "Skin concern documentation",
+  "description": "Record a rash, wound or persistent patch for an ANM or clinician.",
+  "input": "symptoms",
+  "model": "Whisper tiny multilingual",
+  "modelRole": "Speech-to-text for worker-reviewed symptoms; no skin-disease image classifier.",
+  "source": "https://github.com/openai/whisper",
+  "fields": [
+    [
+      "duration",
+      "Concern present for (days)",
+      "number",
+      0,
+      365
+    ],
+    [
+      "fever",
+      "Fever reported",
+      "boolean"
+    ],
+    [
+      "spreading",
+      "Rapidly spreading redness or swelling",
+      "boolean"
+    ],
+    [
+      "numbness",
+      "Loss of sensation reported",
+      "boolean"
+    ]
+  ],
+  "sample": {
+    "duration": 10,
+    "fever": false,
+    "spreading": false,
+    "numbness": true
+  },
+  "note": "A persistent skin patch has reduced sensation. Arrange clinical assessment.",
+  "guidance": "https://nhm.gov.in/images/pdf/communitisation/asha/Notes_for_ASHA_Trainers_Part-1_English.pdf"
+}
